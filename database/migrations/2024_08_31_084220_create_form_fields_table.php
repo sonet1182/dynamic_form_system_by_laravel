@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -18,7 +17,7 @@ return new class extends Migration
             $table->foreignId('form_id')->constrained()->onDelete('cascade');
             $table->string('label');
             $table->string('name'); // unique identifier
-            $table->enum('type', ['text', 'number', 'date', 'dropdown', 'email', 'password', 'checkbox', 'radio'])->change();
+            $table->enum('type', ['text', 'number', 'date', 'dropdown', 'email', 'password', 'checkbox', 'radio']);
             $table->boolean('required')->default(false);
             $table->enum('category', ['general', 'identity', 'bank']);
             $table->json('options')->nullable(); // For dropdowns

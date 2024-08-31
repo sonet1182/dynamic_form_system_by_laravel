@@ -13,9 +13,6 @@ Name: dynamic_form
 ```
 php artisan migrate
 php artisan db:seed
-npm install
-npm run build
-npm run dev
 ```
 
 ## Login Credentials
